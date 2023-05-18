@@ -3,7 +3,7 @@
 # include "Contact.hpp"
 
 class PhoneBook{
-	private:
+	public:
 		Contact		contacts[8];	
 		void		checkContacts();
 };
