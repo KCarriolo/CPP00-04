@@ -5,6 +5,6 @@
 class PhoneBook{
 	private:
 		Contact		contacts[8];	
-		void		checkContacts(
+		void		checkContacts();
 };
 #endif
