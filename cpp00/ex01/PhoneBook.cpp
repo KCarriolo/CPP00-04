@@ -24,6 +24,7 @@ void	PhoneBook::initBanner()
 void	PhoneBook::initRoutine()
 {
 	i = 0;
+	contact_count = -1;
 	while(1)
 	{
 		std::cout << std::endl;
@@ -78,25 +79,60 @@ void	PhoneBook::fillFields()
 	std::getline(std::cin, input);
 	this->contacts[i].setDarkestSecret(input);
 	i++;	
+	contact_count++;
 }
 
 void	PhoneBook::initPhonebookTable()
 {
+	int	c = 0;
 	for (int j = 0; j < 9; j++){
 		for (int k = 0; k < 45; k++)
 			std::cout << "-";
 		std::cout << std::endl << "|";
-		for (int k = 0; k < 4; k++){
-			std::cout << std::setw(11);
-			std::cout << "|";
+		//for (int k = 0; k < 4; k++){
+		if (contact_count >= 0){
+			fillTable(c);
+			c++;
 		}
+		else{
+			std::cout << std::setw(10);
+			std::cout << c;
+			std::cout << "|";
+			c++;
+			for (int k = 0; k < 3; k++){
+				std::cout << std::setw(11);
+				std::cout << "|";
+			}
+		}
+		//}
 		std::cout << std::endl;
-		/*std::cout << std::setfill(' ');
-		std::cout << std::setw(10);
-		std::cout << this->contacts[0].getFirstName() << "|" << std::endl;*/
 	}
 	for (int k = 0; k < 45; k++)
 		std::cout << "-";
 	std::cout << std::endl << "Input the index of the contact:";
 	std::getline(std::cin, input);	
+	//funk_inputValidation()
+	if(checkEntries()){
+		std::cout << std::endl << "There is no entries on the Phonebook list!" << std::endl;
+		return ;
+	}
+}
+
+int	PhoneBook::checkEntries()
+{
+	if (contact_count >= 0)
+		return (0);
+	return (1);
+}
+
+void	PhoneBook::fillTable(int c)
+{
+	std::cout << std::setw(10);
+	std::cout << c << "|";
+	std::cout << std::setw(10);
+	std::cout << this->contacts[c].getFirstName() << "|";
+	std::cout << std::setw(10);
+	std::cout << this->contacts[c].getLastName() << "|";
+	std::cout << std::setw(10);
+	std::cout << this->contacts[c].getNickname() << "|";
 }
