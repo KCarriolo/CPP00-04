@@ -1,9 +1,9 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 # include "Contact.hpp"
-# include <iostream>
 # include <cctype>
 # include <iomanip>
+# include <cstdlib>
 
 class PhoneBook{
 	public:
@@ -11,14 +11,18 @@ class PhoneBook{
 		void		initAll();
 	private:
 		int						i;
+		int						c;
 		int						contact_count;
+		std::string				info;
 		std::string				input;
 		void					initBanner();
 		void					initRoutine();
 		void					initPhonebookTable();
 		void					fillFields();
+		void					clearFields(int i);
 		void					fillTable(int c);
 		int						checkEntries();
-		std::string	checkLength(std::string input);
+		int						checkIndexInput();
+		int						printContactInfo(int n);
 };
 #endif
