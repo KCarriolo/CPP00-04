@@ -29,8 +29,7 @@ void	PhoneBook::initRoutine()
 	{
 		std::cout << std::endl;
 		std::cout << "Insert a option: " << std::endl;
-		std::getline(std::cin, input);
-		if (std::cin.eof())
+		if(std::getline(std::cin, input).eof())
 			exit (0);
 		for (int j = 0; input[j]; j++)
 			input[j] = std::toupper(input[j]);
@@ -59,8 +58,7 @@ void	PhoneBook::fillFields()
 	info.clear();
 	while (info.empty()){
 		std::cout << "First Name: ";	
-		std::getline(std::cin, info);
-		if (std::cin.eof())
+		if(std::getline(std::cin, info).eof())
 			exit (0);
 		if (!this->contacts[i].setFirstName(info))
 			break ;
@@ -69,8 +67,7 @@ void	PhoneBook::fillFields()
 	info.clear();	
 	while (info.empty()){
 		std::cout << "Last Name: ";
-		std::getline(std::cin, info);
-		if (std::cin.eof())
+		if(std::getline(std::cin, info).eof())
 			exit (0);
 		if(!this->contacts[i].setLastName(info))
 			break ;
@@ -79,8 +76,7 @@ void	PhoneBook::fillFields()
 	info.clear();
 	while (info.empty()){
 		std::cout << "Nickname: ";
-		std::getline(std::cin, info);
-		if (std::cin.eof())
+		if(std::getline(std::cin, info).eof())
 			exit (0);
 		if(!this->contacts[i].setNickname(info))
 			break ;
@@ -89,8 +85,7 @@ void	PhoneBook::fillFields()
 	info.clear();
 	while (info.empty()){
 		std::cout << "Phone Number: ";
-		std::getline(std::cin, info);
-		if (std::cin.eof())
+		if(std::getline(std::cin, info).eof())
 			exit (0);
 		if(!this->contacts[i].setPhoneNumber(info))
 			break ;
@@ -99,8 +94,7 @@ void	PhoneBook::fillFields()
 	info.clear();
 	while (info.empty()){
 		std::cout << "Darkest Secret: ";
-		std::getline(std::cin, info);
-		if (std::cin.eof())
+		if(std::getline(std::cin, info).eof())
 			exit (0);
 		if(!this->contacts[i].setDarkestSecret(info))
 			break ;
@@ -138,8 +132,7 @@ void	PhoneBook::initPhonebookTable()
 	for (int k = 0; k < 45; k++)
 		std::cout << "-";
 	std::cout << std::endl << "Input the index of the contact:";
-	std::getline(std::cin, info);	
-	if (std::cin.eof())
+	if(std::getline(std::cin, info).eof())
 		exit (0);
 	checkIndexInput();
 	if(checkEntries()){
