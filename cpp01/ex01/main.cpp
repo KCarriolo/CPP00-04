@@ -6,7 +6,7 @@
 /*   By: kefernan <kefernan@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:25:11 by kefernan          #+#    #+#             */
-/*   Updated: 2023/05/24 17:39:48 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:41:52 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int argc, char **argv)
 				return (1);
 			}
 		}
-		if (arg.length() == 0){
+		if (arg.empty()){
 			std::cout << "The name of the zombies can't be a empty string!" << std::endl;
 			return (1);
 		}
