@@ -6,7 +6,7 @@
 /*   By: kefernan <kefernan@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:25:11 by kefernan          #+#    #+#             */
-/*   Updated: 2023/05/24 16:57:54 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:39:48 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,16 @@ int	main(int argc, char **argv)
 			}
 		}
 		i = 0;
+		std::string	arg(argv[2]);
 		while (argv[2][i]){
 			if (!isalpha(argv[2][i++])){
 				std::cout << "The name of the zombies must contain only alphabetical characters!" << std::endl;			
 				return (1);
 			}
+		}
+		if (arg.length() == 0){
+			std::cout << "The name of the zombies can't be a empty string!" << std::endl;
+			return (1);
 		}
 		int	z = atoi(argv[1]);
 		Zombie* horde = zombieHorde(z, argv[2]);

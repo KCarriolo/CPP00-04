@@ -4,7 +4,7 @@ SRCS	= main.cpp \
 
 NAME	= horde
 
-CPP		= c++ -Wall -Wextra -Werror -std=c++98
+CPP		= c++ -g -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -rf
 
