@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	std::ifstream file (argv[1]);
-	if (!file.is_open()){
+	if (!file.good()){
 		std::cout << "Error: file does not exist or you don't have permission to access it" << std::endl;
 		file.close();
 		return (1);
@@ -32,8 +32,8 @@ int	main(int argc, char **argv)
 	std::string		arg1 (argv[1]);
 	std::ifstream	auxSwap;
 	std::ofstream 	outFile (arg1.append(".replace").data());
-	if (!outFile.is_open()){
-		std::cout << "Error: You don't have the required permissions for .replace file" << std::endl;
+	if (!outFile.good()){
+		std::cout << "Error: You don't have the required permissions on .replace file" << std::endl;
 		file.close();
 		auxSwap.close();
 		outFile.close();
