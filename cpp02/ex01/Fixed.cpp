@@ -10,11 +10,16 @@ Fixed::Fixed(const Fixed& copy){
 }
 
 Fixed::Fixed(const int number): fixedValue(number){
-	std::cout << "Init integer constructor called" << std::endl;
+	std::cout << "Init integer constructor called" << std::endl; 
 }
 
-Fixed::Fixed(const float numberF): fixedValue(numberF){
+Fixed::Fixed(const float numberF){
 	std::cout << "Init float constructor called" << std::endl;
+	int n = 2;
+	int	r = n;
+	for(int i = 0; i < (fractBits - 1); i++)
+		r *= n; 
+	fixedValue = roundf(numberF * n);
 }
 
 Fixed& Fixed::operator=(const Fixed& obj){

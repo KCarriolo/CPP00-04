@@ -13,9 +13,13 @@ class	Fixed{
 		Fixed& operator=(const Fixed& obj);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
+		float	toFloat(void) const;
+		int		toInt(void) const;
 	private:
 		int					fixedValue;
 		static const int	fractBits = 8;
 };
+
+void	operator<<(Fixed& obj);
 
 #endif
