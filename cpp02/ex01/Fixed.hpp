@@ -1,7 +1,7 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 # include <iostream>
-# include <string>
+# include <cmath>
 
 class	Fixed{
 	public:
@@ -20,6 +20,6 @@ class	Fixed{
 		static const int	fractBits = 8;
 };
 
-void	operator<<(Fixed& obj);
+std::ostream&	operator<<(std::ostream& out, const Fixed& in);
 
 #endif
