@@ -54,3 +54,5 @@ std::ostream&	operator<<(std::ostream& out, const Fixed& in){
 	out << in.toFloat();
 	return (out);
 }
+
+const int	Fixed::fractBits = 8;

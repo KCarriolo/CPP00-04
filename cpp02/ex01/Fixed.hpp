@@ -17,7 +17,7 @@ class	Fixed{
 		int		toInt(void) const;
 	private:
 		int					fixedValue;
-		static const int	fractBits = 8;
+		static const int	fractBits;
 };
 
 std::ostream&	operator<<(std::ostream& out, const Fixed& in);
