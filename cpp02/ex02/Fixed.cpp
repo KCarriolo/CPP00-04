@@ -38,7 +38,7 @@ float	Fixed::toFloat(void) const{
 	if (fixedValue < 0){
 		return ((float)~this->fixedValue / (float)(1 << this->fractBits));
 	}
-	return ((float)this->fixedValue / (float)(1 << this->fractBits));
+	return ((float)this->getRawBits() / (float)(1 << this->fractBits));
 }
 
 std::ostream&	operator<<(std::ostream& out, const Fixed& in){
@@ -72,25 +72,25 @@ bool	Fixed::operator!=(const Fixed& n) const{
 
 Fixed	Fixed::operator+(const Fixed& n){
 	Fixed ret(*this);
-	ret.setRawBits(ret.getRawBits() + n.getRawBits());
+	ret.setRawBits(ret.toFloat() + n.toFloat());
 	return (ret);
 }
 
 Fixed	Fixed::operator-(const Fixed& n){
 	Fixed ret(*this);
-	ret.setRawBits(ret.getRawBits() - n.getRawBits());
+	ret.setRawBits(ret.toFloat() - n.toFloat());
 	return (ret);
 }
 
 Fixed	Fixed::operator*(const Fixed& n){
 	Fixed ret(*this);
-	ret.setRawBits((ret.getRawBits() * n.getRawBits()) >> this->fractBits);
+	ret.setRawBits((ret.toFloat() * n.toFloat()));
 	return (ret);
 }
 
 Fixed	Fixed::operator/(const Fixed& n){
 	Fixed ret(*this);
-	ret.setRawBits((ret.getRawBits() / n.getRawBits()) << this->fractBits);
+	ret.setRawBits((ret.toFloat() / n.toFloat()));
 	return (ret);
 }
 

@@ -47,7 +47,7 @@ float	Fixed::toFloat(void) const{
 	if (fixedValue < 0){
 		return ((float)~this->fixedValue / (float)(1 << this->fractBits));
 	}
-	return ((float)this->fixedValue / (float)(1 << this->fractBits));
+	return ((float)this->getRawBits() / (float)(1 << this->fractBits));
 }
 
 std::ostream&	operator<<(std::ostream& out, const Fixed& in){
