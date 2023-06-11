@@ -13,7 +13,7 @@ class	Fixed{
 		void	setRawBits(int const raw);
 	private:
 		int					fixedValue;
-		static const int	fractBits = 8;
+		static const int	fractBits;
 };
 
 #endif
