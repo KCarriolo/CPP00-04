@@ -1,5 +1,9 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(void): _Name("Clapinho"), _hitPoints(10), _energyPoints(10), _attackDamage(0){
+	std::cout << "ClapTrap Constructor called" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name): _Name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0){
 	std::cout << "ClapTrap Constructor called" << std::endl;
 }
@@ -14,9 +18,11 @@ ClapTrap::~ClapTrap(){
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& obj){
-	this->_hitPoints = obj._hitPoints;	
-	this->_energyPoints = obj._energyPoints;	
-	this->_attackDamage = obj._attackDamage;	
+	if (this != &obj){
+		this->_hitPoints = obj._hitPoints;	
+		this->_energyPoints = obj._energyPoints;	
+		this->_attackDamage = obj._attackDamage;	
+	}
 	return (*this);
 }
 
@@ -52,7 +58,7 @@ void	ClapTrap::takeDamage(unsigned int amount){
 			return ;
 		}
 	}
-	std::cout <<_Name << " is already dead!" << std::endl;
+	std::cout << _Name << " is already dead!" << std::endl;
 	return ;
 }
 
