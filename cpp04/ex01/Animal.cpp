@@ -23,7 +23,6 @@ Animal&	Animal::operator=(const Animal& obj){
 
 Animal::~Animal(void){
 	std::cout << "Animal Destructor called" << std::endl;
-	//delete *this;
 }
 
 std::string	Animal::getType(void){

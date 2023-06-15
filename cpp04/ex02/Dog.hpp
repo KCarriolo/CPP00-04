@@ -8,7 +8,7 @@ class	Dog: public Animal{
 		Dog(Dog& obj);
 		Dog&		operator=(const Dog& obj);
 		~Dog();
-		void		makeSound(void);	
+		void		makeSound(void) const;	
 		//void		setType(std::string typeInput);
 		//std::string	getType();
 	private:

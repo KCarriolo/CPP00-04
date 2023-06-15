@@ -24,7 +24,7 @@ Cat::~Cat(void){
 	delete _neuron;
 }
 
-void	Cat::makeSound(void){
+void	Cat::makeSound(void) const{
 	std::cout << "Maw Aw! Prrr Prrr..." << std::endl;
 	return ;
 }

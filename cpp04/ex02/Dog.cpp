@@ -24,6 +24,6 @@ Dog::~Dog(void){
 	delete _neuron;
 }
 
-void	Dog::makeSound(void){
+void	Dog::makeSound(void) const{
 	std::cout << "Grrr Au au!" << std::endl;
 }

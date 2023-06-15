@@ -7,7 +7,6 @@ int	main(void)
 {
 	{
 		std::cout << std::endl;
-		Animal*	a = new Animal();
 		Animal*	cat = new Cat();
 		Animal*	dog = new Dog();
 
@@ -15,14 +14,11 @@ int	main(void)
 		std::cout << dog->getType() << " " << std::endl;
 		cat->makeSound(); //will output the cat sound!
 		dog->makeSound();
-		a->makeSound();
-		delete a;
 		delete cat;
 		delete dog;
 	}
 	{
 		std::cout << std::endl;
-		Animal*			a = new Animal();
 		WrongAnimal*	cat = new WrongCat();
 		Animal*			dog = new Dog();
 
@@ -30,8 +26,6 @@ int	main(void)
 		std::cout << dog->getType() << " " << std::endl;
 		cat->makeSound(); //will output the WrongAnimal sound!
 		dog->makeSound();
-		a->makeSound();
-		delete a;
 		delete cat;
 		delete dog;
 	}
