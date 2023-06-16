@@ -2,8 +2,13 @@
 # define ICE_HPP
 # include "AMateria.hpp"
 
-class	Ice{
-
+class	Ice: public AMateria{
+	public:	
+		Ice();	
+		Ice(Ice& obj);
+		Ice&	operator=(const Ice& obj);
+		~Ice();
+		Ice*	clone();	
 };
 
 #endif
