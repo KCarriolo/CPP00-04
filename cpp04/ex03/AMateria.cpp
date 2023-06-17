@@ -1,6 +1,6 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const & type){
+AMateria::AMateria(std::string const & type): type(type){
 	std::cout << "AMateria Constructor called" << std::endl;	
 }
 
@@ -20,8 +20,8 @@ AMateria::~AMateria(void){
 	std::cout << "AMateria Destructor called" << std::endl;
 }
 
-/*std::string const &	AMateria::getType(void) const{
-	std::string const	temp;
+void	AMateria::use(ICharacter& target){}
 
-	temp = 
-}*/
+std::string const &	AMateria::getType(void) const{
+	return (this->type);
+}

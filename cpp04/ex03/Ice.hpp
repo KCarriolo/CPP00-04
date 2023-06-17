@@ -6,9 +6,9 @@ class	Ice: public AMateria{
 	public:	
 		Ice();	
 		Ice(Ice& obj);
-		Ice&	operator=(const Ice& obj);
+		Ice&		operator=(const Ice& obj);
 		~Ice();
-		Ice*	clone();	
+		Ice*		clone();	
 };
 
 #endif
