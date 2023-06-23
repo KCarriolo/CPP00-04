@@ -2,6 +2,7 @@
 
 Cure::Cure(void){
 	std::cout << "Cure Constructor called" << std::endl;	
+	this->type = "cure";
 }
 
 Cure::Cure(Cure& obj){
@@ -26,4 +27,5 @@ Cure*	Cure::clone(void){
 
 void	Cure::use(ICharacter& target){
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+	return ;
 }

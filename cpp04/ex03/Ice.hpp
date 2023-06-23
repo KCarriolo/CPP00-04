@@ -9,6 +9,7 @@ class	Ice: public AMateria{
 		Ice&		operator=(const Ice& obj);
 		~Ice();
 		Ice*		clone();	
+		void		use(ICharacter& target);
 };
 
 #endif

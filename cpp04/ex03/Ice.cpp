@@ -2,6 +2,7 @@
 
 Ice::Ice(void){
 	std::cout << "Ice Constructor called" << std::endl;	
+	this->type = "ice";
 }
 
 Ice::Ice(Ice& obj){
@@ -26,4 +27,5 @@ Ice*	Ice::clone(void){
 
 void	Ice::use(ICharacter& target{
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	return ;
 }
