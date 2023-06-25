@@ -22,7 +22,7 @@ Cure::~Cure(void){
 }
 
 Cure*	Cure::clone(void){
-	return (new Cure());	
+	return (new Cure(*this));	
 }
 
 void	Cure::use(ICharacter& target){

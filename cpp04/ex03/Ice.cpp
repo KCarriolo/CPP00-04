@@ -22,7 +22,7 @@ Ice::~Ice(void){
 }
 
 Ice*	Ice::clone(void){
-	return (new Ice());	
+	return (new Ice(*this));	
 }
 
 void	Ice::use(ICharacter& target{

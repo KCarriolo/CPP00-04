@@ -3,6 +3,8 @@ SRCS	=	main.cpp \
 			Ice.cpp \
 			Cure.cpp \
 			Character.cpp \
+			GroundList.cpp \
+			MateriaSource.cpp \
 
 NAME	= FFXLII
 

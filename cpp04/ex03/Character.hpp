@@ -1,6 +1,7 @@
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 # include "AMateria.hpp"
+# include "GroundList.hpp"
 
 class	Character: public AMateria{
 	public:
@@ -12,8 +13,10 @@ class	Character: public AMateria{
 		Amateria*					inventory[4];
 		virtual std::string const &	getName(void) const;
 		virtual void				equip(AMateria* m) const;
-		virtual void				unequip(int idx) const;
+		//virtual void				unequip(int idx) const;
 		virtual void				use(int idx, ICharacter& target) const;
+		void						clearInventory(void);
+		//GroundList					floor;
 	private:
 };
 
