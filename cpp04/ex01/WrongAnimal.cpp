@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:19:50 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:19:51 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:42:33 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ WrongAnimal::WrongAnimal(std::string name): type(name){
 	std::cout << "WrongAnimal Constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal& obj){
+WrongAnimal::WrongAnimal(const WrongAnimal& obj){
 	std::cout << "WrongAnimal Copy Constructor called" << std::endl;	
 	*this = obj;
 }

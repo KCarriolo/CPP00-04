@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:20:17 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:20:18 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:49:32 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Brain::Brain(void){
 	std::cout << "Brain Constructor Called" << std::endl;
 }
 
-Brain::Brain(Brain& obj){
+Brain::Brain(const Brain& obj){
 	std::cout << "Brain Copy Constructor called" << std::endl;
 	*this = obj;
 }

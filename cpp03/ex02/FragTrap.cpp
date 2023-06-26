@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:15:34 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:15:36 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:37:23 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ FragTrap::FragTrap(std::string name): ClapTrap(name){
 	_attackDamage = 30;
 }
 
-FragTrap::FragTrap(FragTrap& obj): ClapTrap(){
+FragTrap::FragTrap(const FragTrap& obj): ClapTrap(){
 	std::cout << "FragTrap Copy Constructor called" << std::endl;
 	*this = obj;
 }

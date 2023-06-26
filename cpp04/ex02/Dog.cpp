@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:20:28 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:20:29 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:50:32 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ Dog::Dog(void): Animal("Dog"){
 	_neuron = new Brain();
 }
 
-Dog::Dog(Dog& obj): Animal("Dog"){
+Dog::Dog(const Dog& obj): Animal("Dog"){
 	std::cout << "Dog Copy Constructor called" << std::endl;
-	this->type = obj.type;
-	this->_neuron = _neuron;
+	*this = obj;
 }
 
 Dog&	Dog::operator=(const Dog& obj){

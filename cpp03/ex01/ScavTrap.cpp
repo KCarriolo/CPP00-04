@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:14:10 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:14:12 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:36:42 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 	_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(ScavTrap& obj): ClapTrap(){
+ScavTrap::ScavTrap(const ScavTrap& obj): ClapTrap(){
 	std::cout << "ScavTrap Copy Constructor called" << std::endl;
 	*this = obj;
 }

@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:20:35 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:20:36 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:55:23 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(void)
 	}
 	{
 		std::cout << std::endl;
+		std::cout << ">>>> EX02 Tests <<<<" << std::endl;
 
 		int i = 0;
 		Animal* array[4];	

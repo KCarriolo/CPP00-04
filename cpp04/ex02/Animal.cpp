@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:20:11 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:20:12 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:49:13 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Animal::Animal(std::string name): type(name){
 	std::cout << "Animal Constructor called" << std::endl;
 }
 
-Animal::Animal(Animal& obj){
+Animal::Animal(const Animal& obj){
 	std::cout << "Animal Copy Constructor called" << std::endl;	
 	*this = obj;
 }

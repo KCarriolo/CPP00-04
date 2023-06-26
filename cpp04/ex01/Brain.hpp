@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:19:29 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:19:30 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:41:26 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class	Brain{
 	public:
 		Brain();
-		Brain(Brain& obj);
+		Brain(const Brain& obj);
 		Brain&	operator=(const Brain& obj);
 		~Brain();
 	protected:
