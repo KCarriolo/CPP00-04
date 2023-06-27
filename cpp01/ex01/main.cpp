@@ -6,11 +6,12 @@
 /*   By: kefernan <kefernan@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:25:11 by kefernan          #+#    #+#             */
-/*   Updated: 2023/05/24 17:41:52 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/27 13:47:51 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iostream>
 
 int	main(int argc, char **argv)
 {

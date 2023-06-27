@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:11:07 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:11:08 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/27 14:47:21 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int	main(int argc, char **argv)
 	size_t			pos;
 	std::string		aux;	
 	std::string		arg1 (argv[1]);
-	std::ifstream	auxSwap;
-	std::ofstream 	outFile (arg1.append(".replace").data());
+	std::ifstream		auxSwap;
+	std::ofstream 		outFile (arg1.append(".replace").data());
 	if (!outFile.good()){
 		std::cout << "Error: You don't have the required permissions on .replace file" << std::endl;
 		file.close();

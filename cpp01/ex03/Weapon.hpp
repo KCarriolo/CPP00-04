@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:10:29 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:10:31 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/27 14:04:33 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	Weapon{
 		Weapon(void);
 		Weapon(std::string name);
 		~Weapon(void);
-		const std::string&	getType(void);
+		const std::string&		getType(void);
 		void				setType(std::string type);
 };
 #endif
