@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:11:07 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/27 14:47:21 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/06/27 16:56:29 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	main(int argc, char **argv)
 		file.close();
 		return (1);
 	}
-	char	c;
-	if (file.get(c) == 0){
+	if (file.peek() == std::ifstream::traits_type::eof()){
 		std::cout << "Error: nothing to be searched and replaced. File is empty." << std::endl;
 		file.close();
 		return (1);
@@ -53,7 +52,7 @@ int	main(int argc, char **argv)
 	}
 	while (file.good() && !file.eof())
 	{
-		getline(file, aux);
+		std::getline(file, aux);
 		while ((pos = aux.find(arg2,  0)) != std::string::npos){
 			aux = aux.erase(pos, arg2.length());	
 			aux.insert(pos, arg3);	
