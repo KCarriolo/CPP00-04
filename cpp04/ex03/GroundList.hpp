@@ -1,8 +1,11 @@
 #ifndef GROUNDLIST_HPP
 # define GROUNDLIST_HPP
 # include "Character.hpp"
+# include "ICharacter.hpp"
 
-class	GroundList: public Character{
+class	Character;
+
+class	GroundList{
 	public:
 		GroundList();			
 		GroundList(GroundList& obj);

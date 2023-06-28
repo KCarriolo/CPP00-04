@@ -1,6 +1,6 @@
 #include "Cure.hpp"
 
-Cure::Cure(void){
+Cure::Cure(void): AMateria("cure"){
 	std::cout << "Cure Constructor called" << std::endl;	
 	this->type = "cure";
 }
@@ -21,7 +21,7 @@ Cure::~Cure(void){
 	std::cout << "Cure Destructor called" << std::endl;
 }
 
-Cure*	Cure::clone(void){
+AMateria*	Cure::clone(void) const{
 	return (new Cure(*this));	
 }
 

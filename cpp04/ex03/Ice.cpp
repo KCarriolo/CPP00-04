@@ -1,6 +1,6 @@
 #include "Ice.hpp"
 
-Ice::Ice(void){
+Ice::Ice(void): AMateria("ice"){
 	std::cout << "Ice Constructor called" << std::endl;	
 	this->type = "ice";
 }
@@ -21,7 +21,7 @@ Ice::~Ice(void){
 	std::cout << "Ice Destructor called" << std::endl;
 }
 
-Ice*	Ice::clone(void){
+AMateria*	Ice::clone(void) const{
 	return (new Ice(*this));	
 }
 

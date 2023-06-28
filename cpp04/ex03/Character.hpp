@@ -10,7 +10,7 @@ class	Character: public AMateria{
 		Character&					operator=(const Character& obj);
 		~Character();
 		std::string					name;
-		Amateria*					inventory[4];
+		AMateria*					inventory[4];
 		virtual std::string const &	getName(void) const;
 		virtual void				equip(AMateria* m) const;
 		//virtual void				unequip(int idx) const;

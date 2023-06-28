@@ -3,7 +3,7 @@
 # include <iostream>
 # include "ICharacter.hpp"
 
-class	AMateria: public ICharacter{
+class	AMateria{
 	protected:
 
 	public:
