@@ -6,11 +6,13 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:13:11 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:13:13 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/01 14:22:59 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int	Fixed::fractBits = 8;
 
 Fixed::Fixed(void): fixedValue(0){}
 
@@ -151,5 +153,3 @@ const Fixed&	Fixed::min(const Fixed& x, const Fixed& y){
 		return (x);
 	return (y);
 }
-
-const int	Fixed::fractBits = 8;

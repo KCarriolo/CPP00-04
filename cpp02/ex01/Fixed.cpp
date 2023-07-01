@@ -6,11 +6,13 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:12:48 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:12:49 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/01 14:22:42 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int	Fixed::fractBits = 8;
 
 Fixed::Fixed(void): fixedValue(0){
 	std::cout << "Default constructor called" << std::endl;
@@ -67,4 +69,3 @@ std::ostream&	operator<<(std::ostream& out, const Fixed& in){
 	return (out);
 }
 
-const int	Fixed::fractBits = 8;

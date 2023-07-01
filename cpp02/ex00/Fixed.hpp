@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:12:29 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:12:30 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/01 14:22:17 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class	Fixed{
 		~Fixed(void);	
 		Fixed(const Fixed& copy);	
 		Fixed& operator=(const Fixed& obj);
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		int			getRawBits(void) const;
+		void			setRawBits(int const raw);
 	private:
-		int					fixedValue;
+		int			fixedValue;
 		static const int	fractBits;
 };
 

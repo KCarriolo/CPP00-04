@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:13:21 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:13:22 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/01 14:16:32 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ int main() {
 	std::cout << ++a << std::endl;
 	std::cout << a << std::endl;
 	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << "a value: " << a << std::endl;
+	std::cout << "b value: " << b << std::endl;
+	std::cout << "Max value comparing a and b: " << Fixed::max( a, b ) << std::endl;
+	std::cout << "Min value comparing  a and b: " << Fixed::min( a, b ) << std::endl;
 	std::cout << "--------------------" << std::endl;
 }
 {
