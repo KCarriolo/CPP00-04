@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:13:21 by kefernan          #+#    #+#             */
-/*   Updated: 2023/07/01 14:16:32 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/03 15:20:42 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main() {
 	Fixed a(1000);
 
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << "a = " << a << " b = " << b << std::endl;
+	std::cout << "a = " << a << " | b = " << b << std::endl;
 	std::cout << "a + b = " << (a + b) << std::endl;
 	std::cout << "a - b = " << (a - b) << std::endl;
 	std::cout << "a * b = " << (a * b) << std::endl;
@@ -42,7 +42,7 @@ int main() {
 	Fixed a(10);
 
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << "a = " << a << " b = " << b << std::endl;
+	std::cout << "a = " << a << " | b = " << b << std::endl;
 	std::cout << a << " < " << b << " = " << (a < b) << std::endl;
 	std::cout << a << " > " << b << " = " << (a > b) << std::endl;
 	std::cout << a << " <= " << b << " = " << (a <= b) << std::endl;

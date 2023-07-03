@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:13:11 by kefernan          #+#    #+#             */
-/*   Updated: 2023/07/01 14:22:59 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/03 15:09:58 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	Fixed::getRawBits(void) const{
 }
 
 void	Fixed::setRawBits(int const raw){
-	this->fixedValue = raw;	
+	this->fixedValue = raw << fractBits;	
 }
 
 int	Fixed::toInt(void) const{

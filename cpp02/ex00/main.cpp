@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:12:33 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 14:12:34 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/03 15:18:51 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ int main( void ) {
 	Fixed d;
 
 	c = b;
-	d.setRawBits(21);
 
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
-	std::cout << d.getRawBits() << std::endl;
 
 	return 0;
 }
