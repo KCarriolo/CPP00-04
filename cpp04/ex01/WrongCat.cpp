@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:19:56 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 15:43:01 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/04 20:36:21 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,8 @@ WrongCat&	WrongCat::operator=(const WrongCat& obj){
 
 WrongCat::~WrongCat(void){
 	std::cout << "WrongCat Destructor called" << std::endl;
+}
+
+void	WrongCat::makeSound(void){
+	std::cout << "Meow..?" << std::endl;
 }

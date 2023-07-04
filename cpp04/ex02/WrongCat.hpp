@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:20:50 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 15:51:06 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/04 20:34:52 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class	WrongCat: public WrongAnimal{
 		WrongCat(const WrongCat& obj);				
 		WrongCat&	operator=(const WrongCat& obj);
 		virtual 	~WrongCat();
+		void		makeSound(void);
 };
 
 #endif

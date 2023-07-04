@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:19:53 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 15:42:23 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/04 20:06:09 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	WrongAnimal{
 		WrongAnimal&	operator=(const WrongAnimal& obj);
 		virtual			~WrongAnimal();
 		std::string		getType(void);
-		virtual void	makeSound(void);
+		void			makeSound(void);
 	protected:
 		std::string	type;
 };
