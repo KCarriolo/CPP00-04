@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:12:48 by kefernan          #+#    #+#             */
-/*   Updated: 2023/07/03 15:16:45 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/04 11:33:36 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,3 @@ std::ostream&	operator<<(std::ostream& out, const Fixed& in){
 	out << in.toFloat();
 	return (out);
 }
-
