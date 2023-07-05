@@ -8,7 +8,7 @@ SRCS	=	main.cpp \
 
 NAME	= catdog
 
-CPP		= c++ -g -std=c++98 -Wall -Wextra -Werror
+CPP		= c++ -g -std=c++98 -Wall -Wextra -Werror -fstandalone-debug
 
 RM		= rm -rf
 

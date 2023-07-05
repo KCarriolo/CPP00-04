@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:16:24 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 15:39:53 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/05 15:58:51 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Dog::Dog(void): Animal("Dog"){
 
 Dog::Dog(const Dog& obj): Animal("Dog"){
 	std::cout << "Dog Copy Constructor called" << std::endl;
-	this->type = obj.type;
+	*this = obj;
 }
 
 Dog&	Dog::operator=(const Dog& obj){
 	std::cout << "Dog Copy Assignment Operator called" << std::endl;
 	if (this != &obj){
-		*this = obj;
+		this->type = obj.type;
 	}
 	return (*this);
 }

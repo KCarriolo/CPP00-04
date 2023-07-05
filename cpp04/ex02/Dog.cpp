@@ -6,7 +6,7 @@
 /*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:20:28 by kefernan          #+#    #+#             */
-/*   Updated: 2023/06/26 15:50:32 by kefernan         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:10:25 by kefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Dog::Dog(const Dog& obj): Animal("Dog"){
 Dog&	Dog::operator=(const Dog& obj){
 	std::cout << "Dog Copy Assignment Operator called" << std::endl;
 	if (this != &obj){
-		*this = obj;
+		this->type = obj.type;
 	}
 	return (*this);
 }
