@@ -2,7 +2,6 @@
 
 Cure::Cure(void): AMateria("cure"){
 	std::cout << "Cure Constructor called" << std::endl;	
-	this->type = "cure";
 }
 
 Cure::Cure(Cure& obj){
@@ -13,7 +12,7 @@ Cure::Cure(Cure& obj){
 Cure&	Cure::operator=(const Cure& obj){
 	std::cout << "Cure Copy Assignment Operator called" << std::endl;
 	if (this != &obj)
-		*this = obj;
+		this = obj.clone();
 	return (*this);
 }
 

@@ -2,7 +2,6 @@
 
 Ice::Ice(void): AMateria("ice"){
 	std::cout << "Ice Constructor called" << std::endl;	
-	this->type = "ice";
 }
 
 Ice::Ice(Ice& obj){
@@ -13,7 +12,7 @@ Ice::Ice(Ice& obj){
 Ice&	Ice::operator=(const Ice& obj){
 	std::cout << "Ice Copy Assignment Operator called" << std::endl;
 	if (this != &obj)
-		*this = obj;
+		this = obj.clone();
 	return (*this);
 }
 
