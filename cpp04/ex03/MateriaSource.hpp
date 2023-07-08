@@ -10,7 +10,7 @@ class	MateriaSource: public IMateriaSource{
 		MateriaSource();
 		MateriaSource(MateriaSource& obj);
 		MateriaSource&		operator=(const MateriaSource obj);
-		~MateriaSource();
+		virtual				~MateriaSource();
 		AMateria*			bookMaterias[4];
 		void				learnMateria(AMateria* skill);
 		virtual AMateria*	createMateria(std::string const & type);

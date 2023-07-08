@@ -8,7 +8,7 @@ class	ICharacter;
 
 class	AMateria{
 	protected:
-
+		std::string			type;
 	public:
 		AMateria();
 		AMateria(std::string const & type);
@@ -16,7 +16,6 @@ class	AMateria{
 		AMateria&			operator=(const AMateria& obj);
 		virtual				~AMateria();
 
-		std::string			type;
 		std::string const & getType() const; //Return the materia type
 		virtual AMateria*	clone() const = 0;
 		virtual void		use(ICharacter& target);
