@@ -3,7 +3,7 @@
 MateriaSource::MateriaSource(void){
 	std::cout << "MateriaSource Default Constructor called" << std::endl;
 	for (int i = 0;i < 4;i++)
-		this->bookMaterias[i] = {0};
+		this->bookMaterias[i] = NULL;
 }
 
 MateriaSource::MateriaSource(MateriaSource& obj){
@@ -15,13 +15,18 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& obj){
 	std::cout << "MateriaSource Copy Assignment Operator called" << std::endl;
 	if (this != &obj){
 		for (int i = 0;i < 4;i++)
-			this->bookMaterias.[i] = obj.bookMaterias[i];	
+			this->bookMaterias[i] = obj.bookMaterias[i];	
 	}
 	return (*this);
 }
 
 MateriaSource::~MateriaSource(void){
 	std::cout << "MateriaSource Destructor called" << std::endl;
+	for (int i = 0;i < 4;i++){
+		if (this->bookMaterias[i] != NULL){
+			delete (this->bookMaterias[i]);			
+		}
+	}
 }
 
 void	MateriaSource::learnMateria(AMateria* skill){
@@ -37,13 +42,11 @@ void	MateriaSource::learnMateria(AMateria* skill){
 }
 
 AMateria*	MateriaSource::createMateria(std::string const & type){
-	if (type != "ice" || type != "cure")
-		return (0);
 	int	i = -1;
 	while (++i < 4)
 	{
-		if (this->bookMaterias[i]->getType() == type)
+		if (this->bookMaterias[i] != NULL && this->bookMaterias[i]->getType() == type)
 			return (this->bookMaterias[i]->clone());
 	}
-	return (NULL);
+	return (0);
 }

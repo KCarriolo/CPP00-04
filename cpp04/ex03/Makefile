@@ -2,17 +2,26 @@ SRCS	=	main.cpp \
 			AMateria.cpp \
 			Ice.cpp \
 			Cure.cpp \
-			Character.cpp \
 			GroundList.cpp \
+			Character.cpp \
 			MateriaSource.cpp \
+
+LIBS	=	AMateria.hpp \
+			Character.hpp \
+			Cure.hpp \
+			GroundList.hpp \
+			Ice.hpp \
+			ICharacter.hpp \
+			IMateriaSource.hpp \
+			MateriaSource.hpp \
 
 NAME	= FFXLII
 
-CPP		= c++ -std=c++98 -Wall -Wextra -Werror
+CPP		= c++ -g -std=c++98 -Wall -Wextra -Werror
 
 RM		= rm -rf
 
-$(NAME): $(SRCS)
+$(NAME): $(SRCS) $(LIBS)
 	@$(CPP) $(SRCS) -o $(NAME)
 
 all: $(NAME)

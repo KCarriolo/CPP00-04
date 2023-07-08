@@ -15,11 +15,11 @@ class	Character: public ICharacter{
 		std::string					name;
 		AMateria*					inventory[4];
 		virtual std::string const &	getName(void) const;
-		virtual void				equip(AMateria* m) const;
-		virtual void				unequip(int idx) const;
-		virtual void				use(int idx, ICharacter& target) const;
+		virtual void				equip(AMateria* m);
+		virtual void				unequip(int idx);
+		virtual void				use(int idx, ICharacter& target);
 		void						clearInventory(void);
-		//GroundList					floor;
+		static GroundList*					floor;
 	private:
 };
 

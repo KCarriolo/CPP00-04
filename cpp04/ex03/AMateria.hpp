@@ -2,9 +2,11 @@
 # define AMATERIA_HPP
 # include <iostream>
 # include "ICharacter.hpp"
+# include "GroundList.hpp"
 # include <string>
 
 class	ICharacter;
+class	GroundList;
 
 class	AMateria{
 	protected:
@@ -13,7 +15,7 @@ class	AMateria{
 		AMateria();
 		AMateria(std::string const & type);
 		AMateria(AMateria& obj);
-		AMateria&			operator=(const AMateria& obj);
+		//AMateria&			operator=(const AMateria& obj);
 		virtual				~AMateria();
 
 		std::string const & getType() const; //Return the materia type
