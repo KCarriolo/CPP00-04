@@ -1,5 +1,11 @@
 #include "Character.hpp"
 
+Character::Character(void): name("Unknow"){
+	std::cout << "Character Default Constructor called" << std::endl;			
+	for (int i = 0, i < 4;i++)
+		this->inventory[i] = {0};
+}
+
 Character::Character(std::string name): name(name){
 	std::cout << "Character Constructor called" << std::endl;			
 	for (int i = 0, i < 4;i++)
@@ -14,8 +20,10 @@ Character::Character(Character& obj){
 
 Character&	Character::operator=(const Character& obj){
 	std::cout << "Character Copy Assignment Operator called" << std::endl;	
-	if (this != &obj)
-		*this = obj;
+	if (this != &obj){
+		for (int i = 0;i < 4;i++)
+			this->inventory[i] = obj.inventory[i];
+	}
 	this->clearInventory();
 	return (*this);
 }
@@ -41,7 +49,7 @@ void	Character::equip(AMateria* m) const{
 	}
 	return ;
 }
-/*
+
 void	Character::unequip(int idx) const{
 	if (idx < 0 || idx > 3){
 		std::cout << "Values in the inventory between 0 - 3 only!" << std::endl;
@@ -53,7 +61,7 @@ void	Character::unequip(int idx) const{
 	}
 	return ;
 }
-*/
+
 void	Character::use(int idx, ICharacter& target) const{
 	if (idx < 0 || idx > 3){
 		std::cout << "Materia's must be inside slots between 0 - 3!" << std::endl;

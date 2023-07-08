@@ -2,15 +2,19 @@
 # define AMATERIA_HPP
 # include <iostream>
 # include "ICharacter.hpp"
+# include <string>
+
+class	ICharacter;
 
 class	AMateria{
 	protected:
 
 	public:
+		AMateria();
 		AMateria(std::string const & type);
 		AMateria(AMateria& obj);
 		AMateria&			operator=(const AMateria& obj);
-		~AMateria();
+		virtual				~AMateria();
 
 		std::string			type;
 		std::string const & getType() const; //Return the materia type

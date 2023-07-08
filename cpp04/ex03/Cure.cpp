@@ -1,10 +1,10 @@
 #include "Cure.hpp"
 
 Cure::Cure(void): AMateria("cure"){
-	std::cout << "Cure Constructor called" << std::endl;	
+	std::cout << "Cure Default Constructor called" << std::endl;	
 }
 
-Cure::Cure(Cure& obj){
+Cure::Cure(Cure& obj) AMateria("cure"){
 	std::cout << "Cure Copy Constructor called" << std::endl;
 	*this = obj;
 }

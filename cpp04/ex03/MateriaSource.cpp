@@ -1,7 +1,7 @@
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource(void){
-	std::cout << "MateriaSource Constructor called" << std::endl;
+	std::cout << "MateriaSource Default Constructor called" << std::endl;
 	for (int i = 0;i < 4;i++)
 		this->bookMaterias[i] = {0};
 }
@@ -13,8 +13,10 @@ MateriaSource::MateriaSource(MateriaSource& obj){
 
 MateriaSource&	MateriaSource::operator=(const MateriaSource& obj){
 	std::cout << "MateriaSource Copy Assignment Operator called" << std::endl;
-	if (this != &obj)
-		*this = obj;
+	if (this != &obj){
+		for (int i = 0;i < 4;i++)
+			this->bookMaterias.[i] = obj.bookMaterias[i];	
+	}
 	return (*this);
 }
 
