@@ -9,10 +9,11 @@ class	GroundList{
 		GroundList(AMateria& ref);
 		GroundList&	operator=(const GroundList& obj);
 		~GroundList();			
-		AMateria*		ref;
-		GroundList*		next;
 		void		addBack(GroundList* lastNode);
 		void		clearGroundList(void);	
+	protected:
+		AMateria*		ref;
+		GroundList*		next;
 };
 
 #endif

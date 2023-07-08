@@ -33,7 +33,7 @@ Character&	Character::operator=(const Character& obj){
 Character::~Character(void){
 	std::cout << "Character Destructor called" << std::endl;
 	this->clearInventory();
-	if (floor != NULL)
+	if (this->floor != NULL)
 		this->floor->clearGroundList();
 }
 
@@ -85,8 +85,8 @@ void	Character::clearInventory(void){
 	int i = -1;
 	while(++i < 4)
 	{
-		if (inventory[i] != NULL)
-			delete (inventory[i]);
+		if (this->inventory[i] != NULL)
+			delete (this->inventory[i]);
 	}
 	return ;
 }

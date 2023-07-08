@@ -2,11 +2,16 @@
 
 GroundList::GroundList(void){
 	std::cout << "GroundList Constructor called" << std::endl;
+	this->ref = NULL;
+	this->next = NULL;
 }
 
 GroundList::GroundList(const GroundList& obj){
 	std::cout << "GroundList Copy Constructor called" << std::endl;
-	*this = obj;
+	if (obj.ref == NULL)
+		this->ref = NULL;
+	else
+		this->ref = obj.ref->clone();
 }
 
 GroundList::GroundList(AMateria &ref){
@@ -28,9 +33,8 @@ GroundList::~GroundList(void){
 }
 
 void	GroundList::addBack(GroundList* lastNode){
-	GroundList*	aux;
+	GroundList*	aux = this;
 
-	aux = this;
 	while (aux->next)
 		aux = aux->next;
 	aux->next = lastNode;

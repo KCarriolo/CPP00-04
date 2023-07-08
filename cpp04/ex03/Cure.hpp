@@ -8,8 +8,8 @@ class	Cure: public AMateria{
 		Cure(const Cure& obj);
 		AMateria*	operator=(const AMateria& obj);
 		virtual	~Cure();
-		AMateria*	clone() const;	
-		void	use(ICharacter& target);
+		virtual AMateria*	clone() const;	
+		virtual void	use(ICharacter& target) const;
 };
 
 #endif

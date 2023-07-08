@@ -10,7 +10,7 @@ AMateria::AMateria(std::string const & type): type(type){
 
 AMateria::AMateria(AMateria& obj){
 	std::cout << "AMateria Copy Constructor called" << std::endl;
-	*this = obj;
+	this->type = obj.type;
 }
 
 /*AMateria&	AMateria::operator=(const AMateria& obj){
@@ -26,8 +26,4 @@ AMateria::~AMateria(void){
 
 std::string const &	AMateria::getType(void) const{
 	return (this->type);
-}
-
-void	AMateria::use(ICharacter& target){
-	(void)target;
 }
