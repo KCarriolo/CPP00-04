@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/10 12:42:35 by kefernan          #+#    #+#             */
+/*   Updated: 2023/07/10 12:44:23 by kefernan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AMateria.hpp"
 
 AMateria::AMateria(void): type(""){
@@ -7,18 +19,6 @@ AMateria::AMateria(void): type(""){
 AMateria::AMateria(std::string const & type): type(type){
 	std::cout << "AMateria Constructor called" << std::endl;	
 }
-
-/*AMateria::AMateria(const AMateria& obj){
-	std::cout << "AMateria Copy Constructor called" << std::endl;
-	this->type = obj.type;
-}*/
-
-/*AMateria&	AMateria::operator=(const AMateria& obj){
-	std::cout << "AMateria Copy Assignment Operator called" << std::endl;
-	if (this != &obj)
-		this->type = obj.type;
-	return (*this);
-}*/
 
 AMateria::~AMateria(void){
 	std::cout << "AMateria Destructor called" << std::endl;

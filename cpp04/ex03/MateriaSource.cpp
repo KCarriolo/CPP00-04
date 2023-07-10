@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/10 12:43:38 by kefernan          #+#    #+#             */
+/*   Updated: 2023/07/10 12:45:58 by kefernan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource(void){
@@ -41,20 +53,6 @@ void	MateriaSource::learnMateria(AMateria* skill){
 	if (this->_lastLearned == 4)
 		this->_lastLearned = 0;
 	return ;
-	/*int	i = -1;
-	while (++i < 4)
-	{
-		if (this->bookMaterias[i] == NULL){
-			this->bookMaterias[i] = skill;
-			this->_lastLearned++;
-			if (this->_lastLearned == 4)
-				this->_lastLearned = 0;
-			return ;
-		}
-	}
-	delete (this->bookMaterias[this->_lastLearned]);
-	this->bookMaterias[_lastLearned] = skill;
-	return ;*/
 }
 
 AMateria*	MateriaSource::createMateria(std::string const & type){

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/10 12:43:29 by kefernan          #+#    #+#             */
+/*   Updated: 2023/07/10 12:43:57 by kefernan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AMateria.hpp"
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
@@ -6,7 +18,7 @@
 
 int main()
 {
-	/*{
+	{
 		IMateriaSource* src = new MateriaSource();
 		src->learnMateria(new Ice());
 		src->learnMateria(new Cure());
@@ -27,7 +39,7 @@ int main()
 		delete bob;
 		delete me;
 		delete src;
-	}*/
+	}
 	{
 		std::cout << "============================" << std::endl;	
 		IMateriaSource* src = new MateriaSource();

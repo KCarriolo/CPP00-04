@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kefernan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/10 12:42:52 by kefernan          #+#    #+#             */
+/*   Updated: 2023/07/10 12:45:25 by kefernan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Character.hpp"
 #include "GroundList.hpp"
 
@@ -24,7 +36,6 @@ Character::Character(Character& obj){
 			this->inventory[i] = NULL;
 	}
 	this->name = obj.name;
-	//this->_party++;
 }
 
 Character::~Character(void){
@@ -47,15 +58,12 @@ void	Character::equip(AMateria* m){
 	while (++i < 4)
 	{
 		if (this->inventory[i] == NULL){
+			this->inventory[i] = m;
 			break ;
 		}
 	}
-	if (i == 4){
+	if (i == 4)
 		delete m;
-		return ;
-	}
-	else
-		this->inventory[i] = m;
 	return ;
 }
 
