@@ -1,4 +1,5 @@
 #include "Character.hpp"
+#include "GroundList.hpp"
 
 GroundList*	Character::floor = NULL;
 
@@ -16,25 +17,23 @@ Character::Character(std::string name): name(name){
 
 Character::Character(Character& obj){
 	std::cout << "Character Copy Constructor called" << std::endl;
-	*this = obj;
-	this->clearInventory();
-}
-
-Character&	Character::operator=(const Character& obj){
-	std::cout << "Character Copy Assignment Operator called" << std::endl;	
-	if (this != &obj){
-		for (int i = 0;i < 4;i++)
-			this->inventory[i] = obj.inventory[i];
+	for (int i = 0;i < 4;i++){
+		if (obj.inventory[i] != NULL)
+			this->inventory[i] = obj.inventory[i]->clone();
+		else
+			this->inventory[i] = NULL;
 	}
-	this->clearInventory();
-	return (*this);
+	this->name = obj.name;
+	//this->_party++;
 }
 
 Character::~Character(void){
 	std::cout << "Character Destructor called" << std::endl;
+
 	this->clearInventory();
 	if (this->floor != NULL)
 		this->floor->clearGroundList();
+	this->floor = NULL;
 }
 
 std::string const &	Character::getName(void) const{
@@ -43,13 +42,20 @@ std::string const &	Character::getName(void) const{
 
 void	Character::equip(AMateria* m){
 	int i = -1;
+	if (m == NULL)
+		return ;
 	while (++i < 4)
 	{
 		if (this->inventory[i] == NULL){
-			this->inventory[i] = m;
 			break ;
 		}
 	}
+	if (i == 4){
+		delete m;
+		return ;
+	}
+	else
+		this->inventory[i] = m;
 	return ;
 }
 
@@ -60,12 +66,10 @@ void	Character::unequip(int idx){
 	}
 	if (this->floor == NULL)
 		this->floor = new GroundList(*this->inventory[idx]);
-	else
+	else{
 		this->floor->addBack(new GroundList (*this->inventory[idx]));
-	/*if (this->inventory[idx] != NULL){
-		//getLastNode();
-		this->floor->ref = this->inventory[idx];*/
-		this->inventory[idx] = NULL;
+	}
+	this->inventory[idx] = NULL;
 	return ;
 }
 
@@ -77,6 +81,7 @@ void	Character::use(int idx, ICharacter& target){
 	if (inventory[idx] == NULL){
 		return ;
 	}
+	std::cout << this->getName();
 	this->inventory[idx]->use(target);
 	return ;
 }

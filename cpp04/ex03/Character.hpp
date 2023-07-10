@@ -10,7 +10,7 @@ class	Character: public ICharacter{
 		Character();
 		Character(std::string name);
 		Character(Character& obj);
-		Character&					operator=(const Character& obj);
+		//Character&					operator=(const Character& obj);
 		virtual ~Character();
 		std::string					name;
 		AMateria*					inventory[4];
@@ -20,7 +20,6 @@ class	Character: public ICharacter{
 		virtual void				use(int idx, ICharacter& target);
 		void						clearInventory(void);
 		static GroundList*					floor;
-	private:
 };
 
 #endif

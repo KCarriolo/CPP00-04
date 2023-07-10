@@ -7,7 +7,7 @@ Ice::Ice(void): AMateria("ice"){
 
 Ice::Ice(const Ice& obj): AMateria("ice"){
 	std::cout << "Ice Copy Constructor called" << std::endl;
-	*this = obj;
+	this->type = obj.type;
 }
 
 AMateria*	Ice::clone(void) const{
@@ -25,6 +25,6 @@ Ice::~Ice(void){
 
 
 void	Ice::use(ICharacter& target) const{
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << " * shoots an ice bolt at " << target.getName() << " *" << std::endl;
 	return ;
 }

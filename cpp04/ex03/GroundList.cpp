@@ -6,7 +6,7 @@ GroundList::GroundList(void){
 	this->next = NULL;
 }
 
-GroundList::GroundList(const GroundList& obj){
+GroundList::GroundList(GroundList& obj){
 	std::cout << "GroundList Copy Constructor called" << std::endl;
 	if (obj.ref == NULL)
 		this->ref = NULL;

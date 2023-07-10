@@ -5,7 +5,7 @@
 class	GroundList{
 	public:
 		GroundList();			
-		GroundList(const GroundList& obj);
+		GroundList(GroundList& obj);
 		GroundList(AMateria& ref);
 		GroundList&	operator=(const GroundList& obj);
 		~GroundList();			

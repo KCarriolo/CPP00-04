@@ -8,10 +8,10 @@ AMateria::AMateria(std::string const & type): type(type){
 	std::cout << "AMateria Constructor called" << std::endl;	
 }
 
-AMateria::AMateria(AMateria& obj){
+/*AMateria::AMateria(const AMateria& obj){
 	std::cout << "AMateria Copy Constructor called" << std::endl;
 	this->type = obj.type;
-}
+}*/
 
 /*AMateria&	AMateria::operator=(const AMateria& obj){
 	std::cout << "AMateria Copy Assignment Operator called" << std::endl;
